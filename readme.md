@@ -2,19 +2,19 @@
 
 ## Synopsis
 
-This is a very basic web server which separates the minimised/post processed app.js, styles.css using grunt.
+This is a very basic web server which separates the minimised/post processed app.js, styles.css using gulp.
 The clientside of the website is developed in the /src folder and are transferred to the /webserver/dist folder from where they are served.
 There is also a very basic example of an express API.
 
 ## Motivation
 
-This was made as a convenient, easy to use framework to base a website upon. You can either use the provided grunt task to consolidate scripts in /src/scripts into app.js or you can work, more traditionally, by putting all of your scripts/files into the /src/static. You could even build your website in the /webserver/dist directory - if you do this DO NOT run grunt build! You will need to edit the gitignore file if you wish to version control the /webserver/dist directory.
+This was made as a convenient, easy to use framework to base a website upon. You can either use the provided gulp task to consolidate scripts in /src/scripts into app.js or you can work, more traditionally, by putting all of your scripts/files into the /src/static. You could even build your website in the /webserver/dist directory - if you do this DO NOT run gulp build! You will need to edit the gitignore file if you wish to version control the /webserver/dist directory.
 
 ## Installation
 
-You will need to have grunt and bower installed for this to work.
+You will need to have gulp and bower installed for this to work.
 ```
- npm install grunt -g
+ npm install gulp -g
  npm install bower .g
 ```
 
@@ -27,7 +27,7 @@ Next you will need to install the node modules and bower components (serverside 
 You are now ready to run the website but first we need to build the website.
 We use
 ```
- grunt build
+ gulp build
 ```
 to transfer the clientside app (website) from the /src to the /webserver/dist.
 Now we start the server from the webserver directory
@@ -46,7 +46,7 @@ Next you will want to edit the /src directory. Add a new file called myFirstScri
 ```
 Now run
 ```
- grunt build
+ gulp build
 ```
 to rebuild the website and restart the server.
 (use ctrl+c to stop the website server script) then use
@@ -79,9 +79,8 @@ No tests currently
 ## What about the future? (TODO)
 
 I'd like to make tests.
-I'd like to provide gulp as an alternative to grunt.
+I'd like to provide webpack as an alternative to gulp
 I'd like to make a demonstration angular app.
-Include CIA backdoor, include keylogger, include bitcoin miner, include botnet client, include Ask Jeeves toolbar
 
 ## License
 
